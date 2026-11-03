@@ -1,0 +1,10 @@
+.buildozer/
+bin/
+__pycache__/
+*.py[cod]
+venv/
+.env
+native/build-android/
+native/llama.cpp/
+native/libs/*/*.so
+assets/models/*.gguf
