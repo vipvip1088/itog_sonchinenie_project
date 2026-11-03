@@ -48,7 +48,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y git zip unzip build-essential cmake libffi-dev libssl-dev autoconf libtool pkg-config
           python -m pip install --upgrade pip
-          python -m pip install buildozer cython==0.29.36
+          # Обновляем Cython до версии, рекомендуемой Buildozer
+          python -m pip install buildozer cython==0.29.33
 
       - name: Download local Qwen model
         run: bash scripts/download_model.sh
@@ -57,7 +58,7 @@ jobs:
         run: bash scripts/build_native_android.sh
 
       - name: Build APK
-        run: buildozer android debug
+        run: buildozer -v android debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
