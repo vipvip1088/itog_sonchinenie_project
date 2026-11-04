@@ -26,3 +26,6 @@ android.permissions =
 [buildozer]
 log_level = 2
 warn_on_root = 1
+android.sdk_path = /home/runner/android-sdk 
+android.ndk_path = /home/runner/android-sdk/ndk/27.2.12479018 
+android.accept_sdk_license = True 
