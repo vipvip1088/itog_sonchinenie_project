@@ -10,6 +10,12 @@ version = 1.0.0
 requirements = python3,kivy,pyjnius
 orientation = portrait
 fullscreen = 0
+android.sdk_path = /home/runner/android-sdk
+android.ndk_path = /home/runner/android-sdk/ndk/27.2.12479018
+android.accept_sdk_license = True
+android.skip_update = True
+android.ndk = 27.2.12479018
+android.sdk = 35
 
 # APK предназначен для современных ARM64-телефонов, включая Samsung S24 Ultra.
 android.api = 35
