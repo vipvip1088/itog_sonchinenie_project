@@ -32,13 +32,10 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Prepare Android SDK Directory
-        run: |
-          sudo mkdir -p /usr/local/lib/android
-          sudo chown -R $USER:$USER /usr/local/lib/android
-
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools'
 
       - name: Install Android NDK and CMake
         shell: bash
