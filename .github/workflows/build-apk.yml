@@ -6,6 +6,7 @@ on:
 env:
   ANDROIDSDK: /home/runner/android-sdk
   ANDROIDNDK: /home/runner/android-sdk/ndk/27.2.12479018
+  ANDROID_NDK_HOME: /home/runner/android-sdk/ndk/27.2.12479018
   ANDROID_HOME: /home/runner/android-sdk
   ANDROID_SDK_ROOT: /home/runner/android-sdk
 
@@ -53,6 +54,9 @@ jobs:
         run: |
           yes | sdkmanager --licenses >/dev/null || true
           sdkmanager "platform-tools" "platforms;android-35" "build-tools;34.0.0" "ndk;27.2.12479018" "cmake;3.22.1"
+
+      - name: Verify NDK Directory
+        run: ls -la /home/runner/android-sdk/ndk/
 
       - name: Install build dependencies
         run: |
